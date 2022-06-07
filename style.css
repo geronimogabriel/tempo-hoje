@@ -1,0 +1,119 @@
+@font-face {
+    font-family: weather;
+    src: url('fonts/weathericons-regular-webfont.ttf');
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap');
+body{
+    background-color: #353c49;
+}
+.container {
+    display: grid;
+    font-family: 'Poppins', sans-serif;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
+    min-width: 200px;
+    margin: 12rem auto;
+    background-color: #20252c;
+    border-radius: 1rem;
+}
+.weather {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: whitesmoke;
+    background: linear-gradient(142deg, rgba(0, 213, 255, 0.692) 10%, rgba(88, 88, 185, 0.664) 90%);
+    border-radius: 1rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 500px;
+    max-width: 400px;
+    min-height: 100px;
+    padding: 2rem;
+}
+
+.semana,
+.date,
+.city {
+    margin-bottom: .5rem;
+}
+
+.semana {
+    font-weight: bolder;
+    font-size: 3rem;
+}
+.city,
+.date {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+.tempo {
+    font-weight: bolder;
+    font-size: 5rem;
+}
+.icon {
+    font-size: 5rem;
+}
+.descricao {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: .5rem;
+}
+.informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.dados {
+    display: flex;
+    column-gap: .5rem;
+}
+.umidade i {
+    font-size: 1.5rem;
+}
+.weather-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: whitesmoke;
+    padding: 2rem;
+}
+.btn input{
+    width: 100%;
+    height: 3rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: whitesmoke;
+    border-radius: 2rem;
+    background: linear-gradient(90deg, rgba(0, 213, 255, 0.692) 20%, rgba(88, 88, 185, 0.664) 80%);
+    border: none;
+    transition: all .2s ease;
+    text-align: center;
+}
+
+.btn i {
+    position: absolute;
+    padding: 13px;
+    font-size: 1.5rem;
+}
+
+.btn input::placeholder {
+    text-align: center;
+    color: whitesmoke;
+}
+
+.btn input:active {
+    background: linear-gradient(90deg, rgba(0, 213, 255, 0.692) 20%, rgba(88, 88, 185, 0.664) 80%);
+    transition: all .2s ease;
+    transform: scale(.98);
+    box-shadow: 0px 0px 20px -8px #00d5ffb0;
+}
+
+@media (max-width: 760px) {
+    .container{
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    }
+}
